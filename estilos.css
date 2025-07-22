@@ -28,11 +28,32 @@ header {
   background-color: #c52234;
 }
 
-main#grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+main#semesters {
+  display: flex;
+  overflow-x: auto;
   padding: 2rem;
+  gap: 1rem;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.semester {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 240px;
+  background: #eaeaea;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  border: 2px solid #ccc; /* borde visible */
+  margin-right: 1rem; /* espacio entre semestres */
+}
+
+
+.semester h2 {
+  text-align: center;
+  margin: 0;
 }
 
 .course {
@@ -43,7 +64,7 @@ main#grid {
   color: white;
   font-weight: bold;
   text-align: center;
-  min-height: 80px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
