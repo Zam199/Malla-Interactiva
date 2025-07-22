@@ -1,1 +1,66 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #333;
+}
 
+header {
+  background-color: #3C096C;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+#reset {
+  margin-top: 1rem;
+  background-color: #E63946;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#reset:hover {
+  background-color: #c52234;
+}
+
+main#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.course {
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  user-select: none;
+}
+
+.blocked {
+  background-color: #3C096C;
+}
+
+.unlocked {
+  background-color: #C77DFF;
+}
+
+.completed {
+  background-color: #EBC9FF;
+  color: #444;
+  text-decoration: line-through;
+}
