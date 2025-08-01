@@ -85,3 +85,51 @@ main#semesters {
   color: #444;
   text-decoration: line-through;
 }
+/* ✅ RESPONSIVE DESIGN: sin cambiar colores ni estilo general */
+@media (max-width: 1024px) {
+  main#semesters {
+    flex-wrap: wrap; /* Permite que los semestres bajen en filas si no caben */
+    justify-content: center;
+  }
+
+  .semester {
+    min-width: 45%; /* Dos columnas en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem; /* Ajusta título sin cambiar color */
+  }
+
+  #reset {
+    width: 100%; /* Botón a ancho completo en móvil */
+    font-size: 0.9rem;
+  }
+
+  main#semesters {
+    flex-direction: column; /* Los semestres se apilan verticalmente */
+    align-items: center;
+  }
+
+  .semester {
+    width: 90%; /* Un semestre por fila en móviles */
+    min-width: unset;
+  }
+
+  .course {
+    font-size: 0.9rem; /* Ajusta texto sin cambiar colores */
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .semester h2 {
+    font-size: 1rem; /* Reduce solo tamaño del título */
+  }
+
+  .course {
+    font-size: 0.8rem; /* Texto más compacto en pantallas muy pequeñas */
+    min-height: 50px;
+  }
+}
